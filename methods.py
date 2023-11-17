@@ -15,9 +15,19 @@ class Mobile:
         Mobile.instances.append(self)
 
     def info(self) -> str:
+        """get info about mobile
+
+        Returns:
+            str: description
+        """
         return f"{self.name} costs {self.price}"
 
     def total(self) -> float:
+        """get total price
+
+        Returns:
+            float: price
+        """        
         return self.price * self.quantity
 
 m1 = Mobile(name='Samsung s21', ram=6, memory=128, color='black', price=800.00, brend='Samsung', quantity=12)
@@ -25,3 +35,5 @@ m2 = Mobile(name='Iphone 14', ram=6, memory=256, color='gray', price=900.00, bre
 
 print(Mobile.total_price)
 print(Mobile.instances)
+
+print(m1.total())
