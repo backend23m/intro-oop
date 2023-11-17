@@ -1,6 +1,6 @@
 class Mobile:
     total_price = 0
-    inctances = []
+    instances = []
 
     def __init__(self, name: str, ram: int, memory: int, color: str, price: float, brend: str, quantity: int):
         self.name     = name
@@ -12,7 +12,7 @@ class Mobile:
         self.quantity = quantity
 
         Mobile.total_price += self.total()
-        Mobile.inctances.append(self)
+        Mobile.instances.append(self)
 
     def info(self) -> str:
         return f"{self.name} costs {self.price}"
@@ -24,4 +24,4 @@ m1 = Mobile(name='Samsung s21', ram=6, memory=128, color='black', price=800.00, 
 m2 = Mobile(name='Iphone 14', ram=6, memory=256, color='gray', price=900.00, brend='Iphone', quantity=7)
 
 print(Mobile.total_price)
-print(Mobile.inctances)
+print(Mobile.instances)
